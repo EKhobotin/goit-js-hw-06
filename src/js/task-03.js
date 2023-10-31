@@ -12,3 +12,17 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+//шукаємо елемент для вставки
+const listGallery = document.querySelector('.gallery')
+//створюємо функцію для одного елемента забраження
+const makeImg = ({ alt, url: src }) =>`<li><img src="${src}" alt="${alt}"/></li>`; 
+//створюємо функцію дkz всіх зображень
+const makeImgs = (imgsArr) => imgsArr.map(makeImg).join('')
+//вставляємо елементи
+const renderImgs = (imgsArr) => {
+  const listImgs = makeImgs(imgsArr);
+  listGallery.insertAdjacentHTML('afterbegin', listImgs);
+}
+renderImgs(images)
+
