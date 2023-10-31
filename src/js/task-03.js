@@ -17,7 +17,7 @@ const images = [
 const listGallery = document.querySelector('.gallery')
 //створюємо функцію для одного елемента забраження
 const makeImg = ({ alt, url: src }) =>`<li><img src="${src}" alt="${alt}"/></li>`; 
-//створюємо функцію дkz всіх зображень
+//створюємо функцію для всіх зображень
 const makeImgs = (imgsArr) => imgsArr.map(makeImg).join('')
 //вставляємо елементи
 const renderImgs = (imgsArr) => {
